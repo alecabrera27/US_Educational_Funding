@@ -15,12 +15,22 @@ We are curious if the levels of funding revenue and state expenditure ratios hav
 
 ## Team Makeup
 Alejandra Alvarez
+
 Eric Dalley
+
 Kenny Priester
+
 Joel Robles
 
 ## Technologies Utilized
-Machine Learning
+Machine Learning (K-Means)
+
 Pandas
-SQL
+
+Jupyter Notebook
+
+PostgreSQL
+
 Tableau
+
+Git
