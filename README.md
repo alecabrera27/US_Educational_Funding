@@ -55,7 +55,7 @@ The team will meet up as needed to discuss steps within the project and lend ass
 
 As this project is taking a large amount of data from across a range of years (and further exploring and understanding relationships), the team has decided to create a database. After importing the CSV file from Kaggle and cleaning it up, the database will utilize the following structure:
 
-![ERD}(https://github.com/alecabrera27/US_Educational_Funding/blob/2b975bc5b10ef4fae4ed21073ae5afa153144987/Resources/Images/ERD.png)
+![ERD](https://github.com/alecabrera27/US_Educational_Funding/blob/2b975bc5b10ef4fae4ed21073ae5afa153144987/Resources/Images/ERD.png)
 
 The team will be utilizing PostgreSQL during this step.
 
