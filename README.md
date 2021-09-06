@@ -35,6 +35,13 @@ By performing an exploratory data analysis, we have found the following columns 
  * Average National Assessment of Educational Progress Math Scores (4th & 8th Grade)
  * Average National Assessment of Educational Progress Reading Scores (4th & 8th Grade)
 
+## Questions we are seeking to answer
+
+The team is specifically interested in looking at exploring the following:
+
+* Are there correlations between funding and/or expenditures and the average NAEP Math/Reading scores for 4th and 8th grade?
+* How do funding and expenditures of higher performing states (as defined by higher average NAEP Math/Reading scores) compare to states that are lower performing?
+
 ## Team Makeup
 
 Considering the scope of the project, a team has been formed that comprises of the following individuals: 
@@ -75,3 +82,4 @@ Finally, in the presentation of the data and results, the team will utilize the 
 
 * Tableau
 * GitHub
+
