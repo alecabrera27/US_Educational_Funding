@@ -1,0 +1,2602 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20203.20.1110.1623                               -->
+<workbook source-build='2020.3.3 (20203.20.1110.1623)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column alias='Avg 8th Grade Reading Score' caption='Choose a Test Category' datatype='string' name='[AvgMath4Score Parameter]' param-domain-type='list' role='measure' type='nominal' value='&quot;AvgReading8Score&quot;'>
+        <calculation class='tableau' formula='&quot;AvgReading8Score&quot;' />
+        <aliases>
+          <alias key='&quot;AvgMath4Score&quot;' value='Avg 4th Grade Math Score' />
+          <alias key='&quot;AvgMath8Score&quot;' value='Avg 8th Grade Math Score' />
+          <alias key='&quot;AvgReading4Score&quot;' value='Avg 4th Grade Reading Score' />
+          <alias key='&quot;AvgReading8Score&quot;' value='Avg 8th Grade Reading Score' />
+        </aliases>
+        <members>
+          <member alias='Avg 4th Grade Math Score' value='&quot;AvgMath4Score&quot;' />
+          <member alias='Avg 8th Grade Math Score' value='&quot;AvgMath8Score&quot;' />
+          <member alias='Avg 4th Grade Reading Score' value='&quot;AvgReading4Score&quot;' />
+          <member alias='Avg 8th Grade Reading Score' value='&quot;AvgReading8Score&quot;' />
+        </members>
+      </column>
+      <column alias='Revenue per Student' caption='Choose a Statistic' datatype='string' name='[Choose a Y Axis (copy)_4587831029485629441]' param-domain-type='list' role='measure' type='nominal' value='&quot;RevenuePerStudent&quot;'>
+        <calculation class='tableau' formula='&quot;RevenuePerStudent&quot;' />
+        <aliases>
+          <alias key='&quot;FederalFundingPercent&quot;' value='Federal Funding Percent' />
+          <alias key='&quot;InstructionalExpensePercent&quot;' value='Instructional Expense Percent' />
+          <alias key='&quot;LocalFundingPercent&quot;' value='Local Funding Percent' />
+          <alias key='&quot;RevenuePerStudent&quot;' value='Revenue per Student' />
+          <alias key='&quot;StateFundingPercent&quot;' value='State Funding Percent' />
+        </aliases>
+        <members>
+          <member alias='Revenue per Student' value='&quot;RevenuePerStudent&quot;' />
+          <member alias='Instructional Expense Percent' value='&quot;InstructionalExpensePercent&quot;' />
+          <member alias='Federal Funding Percent' value='&quot;FederalFundingPercent&quot;' />
+          <member alias='State Funding Percent' value='&quot;StateFundingPercent&quot;' />
+          <member alias='Local Funding Percent' value='&quot;LocalFundingPercent&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='output' inline='true' name='federated.08s3xe219ohc8i10mj3pe11xyo75' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='output' name='semistructpassivestore-direct.1kbeu5h0qnwjxk16lv0u20xtrjod'>
+            <connection class='semistructpassivestore-direct' directory='/Users/kortel/Documents/DataBootcamp/FinalProject/US_Educational_Funding/Resources' filename='output.json' password='' server=''>
+              <semistruct-schemas>
+                <semistruct-schema table='[output.json]'>
+                  <map key='{root}' value='true' />
+                </semistruct-schema>
+              </semistruct-schemas>
+            </connection>
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='semistructpassivestore-direct.1kbeu5h0qnwjxk16lv0u20xtrjod' name='output.json' table='[output.json]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='semistructpassivestore-direct.1kbeu5h0qnwjxk16lv0u20xtrjod' name='output.json' table='[output.json]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Document Index (generated)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Document Index (generated)]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>Document Index (generated)</remote-alias>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AvgMath4Score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AvgMath4Score]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>AvgMath4Score</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AvgMath8Score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AvgMath8Score]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>AvgMath8Score</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AvgReading4Score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AvgReading4Score]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>AvgReading4Score</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AvgReading8Score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AvgReading8Score]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>AvgReading8Score</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CapitalOutlayExpenditure</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[CapitalOutlayExpenditure]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>CapitalOutlayExpenditure</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cluster</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Cluster]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>Cluster</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Enrolled</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Enrolled]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>Enrolled</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FederalFundingPercent</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[FederalFundingPercent]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>FederalFundingPercent</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FederalRevenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[FederalRevenue]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>FederalRevenue</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>InstructionExpenditure</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[InstructionExpenditure]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>InstructionExpenditure</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>InstructionalExpensePercent</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[InstructionalExpensePercent]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>InstructionalExpensePercent</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LocalFundingPercent</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LocalFundingPercent]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>LocalFundingPercent</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LocalRevenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LocalRevenue]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>LocalRevenue</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OtherExpenditure</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[OtherExpenditure]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>OtherExpenditure</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RecordId</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[RecordId]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>RecordId</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RevenuePerStudent</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[RevenuePerStudent]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>RevenuePerStudent</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>State</remote-alias>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StateFundingPercent</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[StateFundingPercent]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>StateFundingPercent</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StateRevenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[StateRevenue]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>StateRevenue</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SupportServicesExpenditure</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[SupportServicesExpenditure]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>SupportServicesExpenditure</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalExpenditure</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[TotalExpenditure]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>TotalExpenditure</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalRevenue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[TotalRevenue]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>TotalRevenue</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[output.json]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[output.json_E9331A44B09F4D7D828794F2C58E7BDA]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' name='[AvgMath4Score]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>AvgMath4Score</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column datatype='real' name='[AvgMath8Score]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>AvgMath8Score</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column datatype='real' name='[AvgReading4Score]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>AvgReading4Score</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column datatype='real' name='[AvgReading8Score]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>AvgReading8Score</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Chosen Y Axis' datatype='real' name='[Calculation_4587831029484949504]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[AvgMath4Score Parameter]&#10;    WHEN &quot;AvgMath4Score&quot; THEN [AvgMath4Score]&#10;    WHEN &quot;AvgMath8Score&quot; THEN [AvgMath8Score]&#10;    WHEN &quot;AvgReading4Score&quot; THEN [AvgReading4Score]&#10;    WHEN &quot;AvgReading8Score&quot; THEN [AvgReading8Score]&#10;END' />
+      </column>
+      <column caption='Capital Outlay Expenditure' datatype='real' name='[CapitalOutlayExpenditure]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>CapitalOutlayExpenditure</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Chosen X Axis' datatype='real' name='[Chosen Y Axis (copy)_4587831029485940738]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CASE [Parameters].[Choose a Y Axis (copy)_4587831029485629441]&#10;    WHEN &quot;RevenuePerStudent&quot; THEN [RevenuePerStudent]&#10;    WHEN &quot;InstructionalExpensePercent&quot; THEN [InstructionalExpensePercent]&#10;    WHEN &quot;FederalFundingPercent&quot; THEN [FederalFundingPercent]&#10;    WHEN &quot;StateFundingPercent&quot; THEN [StateFundingPercent]&#10;    WHEN &quot;LocalFundingPercent&quot; THEN [LocalFundingPercent]&#10;END' />
+      </column>
+      <column aggregation='Sum' datatype='real' name='[Cluster]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='0.0' value='Lower Performing' />
+          <alias key='1.0' value='Higher Performing' />
+          <alias key='2.0' value='D.C. (Outliers)' />
+        </aliases>
+        <desc>
+          <formatted-text>
+            <run>Cluster</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[Document Index (generated)]' role='dimension' type='ordinal'>
+        <desc>
+          <formatted-text>
+            <run>Document Index (generated)</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column datatype='real' name='[Enrolled]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>Enrolled</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Federal Funding Percent' datatype='real' name='[FederalFundingPercent]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>FederalFundingPercent</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Federal Revenue' datatype='real' name='[FederalRevenue]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>FederalRevenue</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Instruction Expenditure' datatype='real' name='[InstructionExpenditure]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>InstructionExpenditure</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Instructional Expense Percent' datatype='real' name='[InstructionalExpensePercent]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>InstructionalExpensePercent</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Local Funding Percent' datatype='real' name='[LocalFundingPercent]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>LocalFundingPercent</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Local Revenue' datatype='real' name='[LocalRevenue]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>LocalRevenue</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Other Expenditure' datatype='real' name='[OtherExpenditure]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>OtherExpenditure</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Record Id' datatype='string' name='[RecordId]' role='dimension' type='nominal'>
+        <desc>
+          <formatted-text>
+            <run>RecordId</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Revenue Per Student' datatype='real' name='[RevenuePerStudent]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>RevenuePerStudent</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='State Funding Percent' datatype='real' name='[StateFundingPercent]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>StateFundingPercent</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='State Revenue' datatype='real' name='[StateRevenue]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>StateRevenue</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal'>
+        <desc>
+          <formatted-text>
+            <run>State</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Support Services Expenditure' datatype='real' name='[SupportServicesExpenditure]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>SupportServicesExpenditure</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Total Expenditure' datatype='real' name='[TotalExpenditure]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>TotalExpenditure</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column caption='Total Revenue' datatype='real' name='[TotalRevenue]' role='measure' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>TotalRevenue</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <column aggregation='Sum' datatype='real' name='[Year]' role='dimension' type='quantitative'>
+        <desc>
+          <formatted-text>
+            <run>Year</run>
+          </formatted-text>
+        </desc>
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='output.json' datatype='table' name='[__tableau_internal_object_id__].[output.json_E9331A44B09F4D7D828794F2C58E7BDA]' role='measure' type='quantitative' />
+      <column-instance column='[RecordId]' derivation='None' name='[none:RecordId:nk]' pivot='key' type='nominal' />
+      <_.fcp.SchemaViewerObjectModel.false...folder name='Output' role='dimensions'>
+        <folder-item name='[Document Index (generated)]' type='field' />
+        <folder-item name='[RecordId]' type='field' />
+        <folder-item name='[State]' type='field' />
+        <folder-item name='[Year]' type='field' />
+      </_.fcp.SchemaViewerObjectModel.false...folder>
+      <_.fcp.SchemaViewerObjectModel.true...folders-common>
+        <folder name='Output'>
+          <folder-item name='[Document Index (generated)]' type='field' />
+          <folder-item name='[RecordId]' type='field' />
+          <folder-item name='[State]' type='field' />
+          <folder-item name='[Year]' type='field' />
+        </folder>
+      </_.fcp.SchemaViewerObjectModel.true...folders-common>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-aliased-fields='true' show-structure='false' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:RecordId:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;2003_DISTRICT_OF_COLUMBIA&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;2003_NEVADA&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;2003_WEST_VIRGINIA&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;2005_KENTUCKY&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;2005_OREGON&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;2007_CONNECTICUT&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;2007_MONTANA&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;2007_VIRGINIA&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;2009_IOWA&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;2009_OHIO&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;2011_CALIFORNIA&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;2011_MISSISSIPPI&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;2011_UTAH&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;2013_ILLINOIS&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;2013_NORTH_CAROLINA&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;2015_ARIZONA&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;2015_MICHIGAN&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;2015_TENNESSEE&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2003_ALABAMA&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2003_MARYLAND&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2003_SOUTH_CAROLINA&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2005_FLORIDA&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2005_NEW_HAMPSHIRE&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2005_WISCONSIN&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2007_LOUISIANA&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2007_PENNSYLVANIA&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2009_DELAWARE&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2009_NEBRASKA&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2009_WASHINGTON&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2011_KANSAS&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2011_OKLAHOMA&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2013_COLORADO&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2013_MISSOURI&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2013_VERMONT&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2015_INDIANA&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;2015_NORTH_DAKOTA&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2003_CALIFORNIA&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2003_MISSISSIPPI&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2003_UTAH&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2005_ILLINOIS&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2005_NORTH_CAROLINA&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2007_ARIZONA&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2007_MICHIGAN&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2007_TENNESSEE&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2009_HAWAII&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2009_NEW_MEXICO&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2011_ALABAMA&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2011_MARYLAND&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2011_SOUTH_CAROLINA&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2013_FLORIDA&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2013_NEW_HAMPSHIRE&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2013_WISCONSIN&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2015_LOUISIANA&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;2015_PENNSYLVANIA&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2003_IDAHO&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2003_NEW_YORK&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2005_ALASKA&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2005_MASSACHUSETTS&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2005_SOUTH_DAKOTA&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2007_GEORGIA&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2007_NEW_JERSEY&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2007_WYOMING&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2009_MAINE&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2009_RHODE_ISLAND&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2011_DISTRICT_OF_COLUMBIA&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2011_NEVADA&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2011_WEST_VIRGINIA&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2013_KENTUCKY&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2013_OREGON&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2015_CONNECTICUT&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2015_MONTANA&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;2015_VIRGINIA&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2003_FLORIDA&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2003_NEW_HAMPSHIRE&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2003_WISCONSIN&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2005_LOUISIANA&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2005_PENNSYLVANIA&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2007_DELAWARE&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2007_NEBRASKA&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2007_WASHINGTON&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2009_KANSAS&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2009_OKLAHOMA&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2011_COLORADO&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2011_MISSOURI&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2011_VERMONT&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2013_INDIANA&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2013_NORTH_DAKOTA&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2015_ARKANSAS&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2015_MINNESOTA&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;2015_TEXAS&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2003_COLORADO&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2003_MISSOURI&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2003_VERMONT&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2005_INDIANA&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2005_NORTH_DAKOTA&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2007_ARKANSAS&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2007_MINNESOTA&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2007_TEXAS&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2009_IDAHO&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2009_NEW_YORK&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2011_ALASKA&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2011_MASSACHUSETTS&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2011_SOUTH_DAKOTA&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2013_GEORGIA&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2013_NEW_JERSEY&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2013_WYOMING&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2015_MAINE&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;2015_RHODE_ISLAND&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2003_LOUISIANA&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2003_PENNSYLVANIA&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2005_DELAWARE&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2005_NEBRASKA&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2005_WASHINGTON&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2007_KANSAS&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2007_OKLAHOMA&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2009_COLORADO&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2009_MISSOURI&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2009_VERMONT&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2011_INDIANA&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2011_NORTH_DAKOTA&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2013_ARKANSAS&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2013_MINNESOTA&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2013_TEXAS&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2015_IDAHO&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;2015_NEW_YORK&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2003_ALASKA&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2003_MASSACHUSETTS&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2003_SOUTH_DAKOTA&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2005_GEORGIA&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2005_NEW_JERSEY&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2005_WYOMING&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2007_MAINE&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2007_RHODE_ISLAND&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2009_DISTRICT_OF_COLUMBIA&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2009_NEVADA&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2009_WEST_VIRGINIA&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2011_KENTUCKY&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2011_OREGON&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2013_CONNECTICUT&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2013_MONTANA&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2013_VIRGINIA&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2015_IOWA&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;2015_OHIO&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2003_KANSAS&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2003_OKLAHOMA&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2005_COLORADO&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2005_MISSOURI&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2005_VERMONT&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2007_INDIANA&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2007_NORTH_DAKOTA&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2009_ARKANSAS&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2009_MINNESOTA&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2009_TEXAS&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2011_IDAHO&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2011_NEW_YORK&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2013_ALASKA&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2013_MASSACHUSETTS&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2013_SOUTH_DAKOTA&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2015_GEORGIA&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2015_NEW_JERSEY&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;2015_WYOMING&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2003_CONNECTICUT&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2003_MONTANA&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2003_VIRGINIA&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2005_IOWA&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2005_OHIO&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2007_CALIFORNIA&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2007_MISSISSIPPI&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2007_UTAH&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2009_ILLINOIS&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2009_NORTH_CAROLINA&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2011_ARIZONA&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2011_MICHIGAN&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2011_TENNESSEE&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2013_HAWAII&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2013_NEW_MEXICO&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2015_ALABAMA&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2015_MARYLAND&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;2015_SOUTH_CAROLINA&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2003_ILLINOIS&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2003_NORTH_CAROLINA&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2005_ARIZONA&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2005_MICHIGAN&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2005_TENNESSEE&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2007_HAWAII&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2007_NEW_MEXICO&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2009_ALABAMA&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2009_MARYLAND&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2009_SOUTH_CAROLINA&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2011_FLORIDA&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2011_NEW_HAMPSHIRE&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2011_WISCONSIN&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2013_LOUISIANA&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2013_PENNSYLVANIA&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2015_DELAWARE&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2015_NEBRASKA&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;2015_WASHINGTON&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2003_INDIANA&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2003_NORTH_DAKOTA&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2005_ARKANSAS&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2005_MINNESOTA&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2005_TEXAS&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2007_IDAHO&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2007_NEW_YORK&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2009_ALASKA&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2009_MASSACHUSETTS&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2009_SOUTH_DAKOTA&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2011_GEORGIA&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2011_NEW_JERSEY&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2011_WYOMING&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2013_MAINE&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2013_RHODE_ISLAND&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2015_DISTRICT_OF_COLUMBIA&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2015_NEVADA&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;2015_WEST_VIRGINIA&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;2003_KENTUCKY&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;2003_OREGON&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;2005_CONNECTICUT&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;2005_MONTANA&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;2005_VIRGINIA&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;2007_IOWA&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;2007_OHIO&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;2009_CALIFORNIA&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;2009_MISSISSIPPI&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;2009_UTAH&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;2011_ILLINOIS&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;2011_NORTH_CAROLINA&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;2013_ARIZONA&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;2013_MICHIGAN&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;2013_TENNESSEE&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;2015_HAWAII&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;2015_NEW_MEXICO&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2003_MAINE&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2003_RHODE_ISLAND&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2005_DISTRICT_OF_COLUMBIA&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2005_NEVADA&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2005_WEST_VIRGINIA&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2007_KENTUCKY&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2007_OREGON&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2009_CONNECTICUT&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2009_MONTANA&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2009_VIRGINIA&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2011_IOWA&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2011_OHIO&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2013_CALIFORNIA&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2013_MISSISSIPPI&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2013_UTAH&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2015_ILLINOIS&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;2015_NORTH_CAROLINA&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2003_GEORGIA&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2003_NEW_JERSEY&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2003_WYOMING&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2005_MAINE&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2005_RHODE_ISLAND&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2007_DISTRICT_OF_COLUMBIA&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2007_NEVADA&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2007_WEST_VIRGINIA&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2009_KENTUCKY&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2009_OREGON&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2011_CONNECTICUT&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2011_MONTANA&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2011_VIRGINIA&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2013_IOWA&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2013_OHIO&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2015_CALIFORNIA&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2015_MISSISSIPPI&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;2015_UTAH&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2003_DELAWARE&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2003_NEBRASKA&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2003_WASHINGTON&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2005_KANSAS&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2005_OKLAHOMA&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2007_COLORADO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2007_MISSOURI&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2007_VERMONT&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2009_INDIANA&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2009_NORTH_DAKOTA&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2011_ARKANSAS&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2011_MINNESOTA&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2011_TEXAS&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2013_IDAHO&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2013_NEW_YORK&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2015_ALASKA&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2015_MASSACHUSETTS&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;2015_SOUTH_DAKOTA&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2003_ARIZONA&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2003_MICHIGAN&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2003_TENNESSEE&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2005_HAWAII&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2005_NEW_MEXICO&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2007_ALABAMA&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2007_MARYLAND&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2007_SOUTH_CAROLINA&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2009_FLORIDA&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2009_NEW_HAMPSHIRE&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2009_WISCONSIN&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2011_LOUISIANA&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2011_PENNSYLVANIA&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2013_DELAWARE&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2013_NEBRASKA&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2013_WASHINGTON&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2015_KANSAS&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;2015_OKLAHOMA&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2003_IOWA&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2003_OHIO&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2005_CALIFORNIA&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2005_MISSISSIPPI&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2005_UTAH&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2007_ILLINOIS&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2007_NORTH_CAROLINA&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2009_ARIZONA&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2009_MICHIGAN&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2009_TENNESSEE&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2011_HAWAII&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2011_NEW_MEXICO&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2013_ALABAMA&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2013_MARYLAND&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2013_SOUTH_CAROLINA&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2015_FLORIDA&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2015_NEW_HAMPSHIRE&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;2015_WISCONSIN&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2003_HAWAII&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2003_NEW_MEXICO&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2005_ALABAMA&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2005_MARYLAND&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2005_SOUTH_CAROLINA&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2007_FLORIDA&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2007_NEW_HAMPSHIRE&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2007_WISCONSIN&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2009_LOUISIANA&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2009_PENNSYLVANIA&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2011_DELAWARE&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2011_NEBRASKA&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2011_WASHINGTON&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2013_KANSAS&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2013_OKLAHOMA&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2015_COLORADO&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2015_MISSOURI&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;2015_VERMONT&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2003_ARKANSAS&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2003_MINNESOTA&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2003_TEXAS&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2005_IDAHO&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2005_NEW_YORK&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2007_ALASKA&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2007_MASSACHUSETTS&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2007_SOUTH_DAKOTA&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2009_GEORGIA&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2009_NEW_JERSEY&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2009_WYOMING&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2011_MAINE&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2011_RHODE_ISLAND&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2013_DISTRICT_OF_COLUMBIA&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2013_NEVADA&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2013_WEST_VIRGINIA&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2015_KENTUCKY&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;2015_OREGON&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column alias='Avg 8th Grade Reading Score' caption='Choose a Test Category' datatype='string' name='[AvgMath4Score Parameter]' param-domain-type='list' role='measure' type='nominal' value='&quot;AvgReading8Score&quot;'>
+          <calculation class='tableau' formula='&quot;AvgReading8Score&quot;' />
+          <aliases>
+            <alias key='&quot;AvgMath4Score&quot;' value='Avg 4th Grade Math Score' />
+            <alias key='&quot;AvgMath8Score&quot;' value='Avg 8th Grade Math Score' />
+            <alias key='&quot;AvgReading4Score&quot;' value='Avg 4th Grade Reading Score' />
+            <alias key='&quot;AvgReading8Score&quot;' value='Avg 8th Grade Reading Score' />
+          </aliases>
+        </column>
+        <column alias='Revenue per Student' caption='Choose a Statistic' datatype='string' name='[Choose a Y Axis (copy)_4587831029485629441]' param-domain-type='list' role='measure' type='nominal' value='&quot;RevenuePerStudent&quot;'>
+          <calculation class='tableau' formula='&quot;RevenuePerStudent&quot;' />
+          <aliases>
+            <alias key='&quot;FederalFundingPercent&quot;' value='Federal Funding Percent' />
+            <alias key='&quot;InstructionalExpensePercent&quot;' value='Instructional Expense Percent' />
+            <alias key='&quot;LocalFundingPercent&quot;' value='Local Funding Percent' />
+            <alias key='&quot;RevenuePerStudent&quot;' value='Revenue per Student' />
+            <alias key='&quot;StateFundingPercent&quot;' value='State Funding Percent' />
+          </aliases>
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='output.json' id='output.json_E9331A44B09F4D7D828794F2C58E7BDA'>
+            <properties context=''>
+              <relation connection='semistructpassivestore-direct.1kbeu5h0qnwjxk16lv0u20xtrjod' name='output.json' table='[output.json]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Clusters'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='output' name='federated.08s3xe219ohc8i10mj3pe11xyo75' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column alias='Avg 8th Grade Reading Score' caption='Choose a Test Category' datatype='string' name='[AvgMath4Score Parameter]' param-domain-type='list' role='measure' type='nominal' value='&quot;AvgReading8Score&quot;'>
+              <calculation class='tableau' formula='&quot;AvgReading8Score&quot;' />
+              <aliases>
+                <alias key='&quot;AvgMath4Score&quot;' value='Avg 4th Grade Math Score' />
+                <alias key='&quot;AvgMath8Score&quot;' value='Avg 8th Grade Math Score' />
+                <alias key='&quot;AvgReading4Score&quot;' value='Avg 4th Grade Reading Score' />
+                <alias key='&quot;AvgReading8Score&quot;' value='Avg 8th Grade Reading Score' />
+              </aliases>
+            </column>
+            <column alias='Revenue per Student' caption='Choose a Statistic' datatype='string' name='[Choose a Y Axis (copy)_4587831029485629441]' param-domain-type='list' role='measure' type='nominal' value='&quot;RevenuePerStudent&quot;'>
+              <calculation class='tableau' formula='&quot;RevenuePerStudent&quot;' />
+              <aliases>
+                <alias key='&quot;FederalFundingPercent&quot;' value='Federal Funding Percent' />
+                <alias key='&quot;InstructionalExpensePercent&quot;' value='Instructional Expense Percent' />
+                <alias key='&quot;LocalFundingPercent&quot;' value='Local Funding Percent' />
+                <alias key='&quot;RevenuePerStudent&quot;' value='Revenue per Student' />
+                <alias key='&quot;StateFundingPercent&quot;' value='State Funding Percent' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.08s3xe219ohc8i10mj3pe11xyo75'>
+            <column datatype='real' name='[AvgMath4Score]' role='measure' type='quantitative'>
+              <desc>
+                <formatted-text>
+                  <run>AvgMath4Score</run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column datatype='real' name='[AvgMath8Score]' role='measure' type='quantitative'>
+              <desc>
+                <formatted-text>
+                  <run>AvgMath8Score</run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column datatype='real' name='[AvgReading4Score]' role='measure' type='quantitative'>
+              <desc>
+                <formatted-text>
+                  <run>AvgReading4Score</run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column datatype='real' name='[AvgReading8Score]' role='measure' type='quantitative'>
+              <desc>
+                <formatted-text>
+                  <run>AvgReading8Score</run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column caption='Chosen Y Axis' datatype='real' name='[Calculation_4587831029484949504]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[AvgMath4Score Parameter]&#10;    WHEN &quot;AvgMath4Score&quot; THEN [AvgMath4Score]&#10;    WHEN &quot;AvgMath8Score&quot; THEN [AvgMath8Score]&#10;    WHEN &quot;AvgReading4Score&quot; THEN [AvgReading4Score]&#10;    WHEN &quot;AvgReading8Score&quot; THEN [AvgReading8Score]&#10;END' />
+            </column>
+            <column caption='Chosen X Axis' datatype='real' name='[Chosen Y Axis (copy)_4587831029485940738]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='CASE [Parameters].[Choose a Y Axis (copy)_4587831029485629441]&#10;    WHEN &quot;RevenuePerStudent&quot; THEN [RevenuePerStudent]&#10;    WHEN &quot;InstructionalExpensePercent&quot; THEN [InstructionalExpensePercent]&#10;    WHEN &quot;FederalFundingPercent&quot; THEN [FederalFundingPercent]&#10;    WHEN &quot;StateFundingPercent&quot; THEN [StateFundingPercent]&#10;    WHEN &quot;LocalFundingPercent&quot; THEN [LocalFundingPercent]&#10;END' />
+            </column>
+            <column aggregation='Sum' datatype='real' name='[Cluster]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0.0' value='Lower Performing' />
+                <alias key='1.0' value='Higher Performing' />
+                <alias key='2.0' value='D.C. (Outliers)' />
+              </aliases>
+              <desc>
+                <formatted-text>
+                  <run>Cluster</run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column caption='Federal Funding Percent' datatype='real' name='[FederalFundingPercent]' role='measure' type='quantitative'>
+              <desc>
+                <formatted-text>
+                  <run>FederalFundingPercent</run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column caption='Instructional Expense Percent' datatype='real' name='[InstructionalExpensePercent]' role='measure' type='quantitative'>
+              <desc>
+                <formatted-text>
+                  <run>InstructionalExpensePercent</run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column caption='Local Funding Percent' datatype='real' name='[LocalFundingPercent]' role='measure' type='quantitative'>
+              <desc>
+                <formatted-text>
+                  <run>LocalFundingPercent</run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column caption='Record Id' datatype='string' name='[RecordId]' role='dimension' type='nominal'>
+              <desc>
+                <formatted-text>
+                  <run>RecordId</run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column caption='Revenue Per Student' datatype='real' name='[RevenuePerStudent]' role='measure' type='quantitative'>
+              <desc>
+                <formatted-text>
+                  <run>RevenuePerStudent</run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column caption='State Funding Percent' datatype='real' name='[StateFundingPercent]' role='measure' type='quantitative'>
+              <desc>
+                <formatted-text>
+                  <run>StateFundingPercent</run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column-instance column='[Cluster]' derivation='None' name='[none:Cluster:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[RecordId]' derivation='None' name='[none:RecordId:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_4587831029484949504]' derivation='Sum' name='[sum:Calculation_4587831029484949504:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Chosen Y Axis (copy)_4587831029485940738]' derivation='Sum' name='[sum:Chosen Y Axis (copy)_4587831029485940738:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.08s3xe219ohc8i10mj3pe11xyo75].[sum:Chosen Y Axis (copy)_4587831029485940738:qk]' scope='cols' value='' />
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.08s3xe219ohc8i10mj3pe11xyo75].[sum:Calculation_4587831029484949504:qk]' field-type='quantitative' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.08s3xe219ohc8i10mj3pe11xyo75].[sum:Calculation_4587831029484949504:qk]' scope='rows' value='' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[Parameters].[AvgMath4Score Parameter]' value='-90' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.08s3xe219ohc8i10mj3pe11xyo75].[none:Cluster:ok]' />
+              <lod column='[federated.08s3xe219ohc8i10mj3pe11xyo75].[none:RecordId:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([Parameters].[AvgMath4Score Parameter] * [federated.08s3xe219ohc8i10mj3pe11xyo75].[sum:Calculation_4587831029484949504:qk])</rows>
+        <cols>([Parameters].[Choose a Y Axis (copy)_4587831029485629441] * [federated.08s3xe219ohc8i10mj3pe11xyo75].[sum:Chosen Y Axis (copy)_4587831029485940738:qk])</cols>
+      </table>
+      <simple-id uuid='{8E619749-8DB0-4377-A971-E25247B9484E}' />
+    </worksheet>
+    <worksheet name='Scatter Plot'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='output' name='federated.08s3xe219ohc8i10mj3pe11xyo75' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08s3xe219ohc8i10mj3pe11xyo75'>
+            <column datatype='real' name='[AvgMath4Score]' role='measure' type='quantitative'>
+              <desc>
+                <formatted-text>
+                  <run>AvgMath4Score</run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column aggregation='Sum' datatype='real' name='[Cluster]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='0.0' value='Lower Performing' />
+                <alias key='1.0' value='Higher Performing' />
+                <alias key='2.0' value='D.C. (Outliers)' />
+              </aliases>
+              <desc>
+                <formatted-text>
+                  <run>Cluster</run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column caption='Record Id' datatype='string' name='[RecordId]' role='dimension' type='nominal'>
+              <desc>
+                <formatted-text>
+                  <run>RecordId</run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column caption='Revenue Per Student' datatype='real' name='[RevenuePerStudent]' role='measure' type='quantitative'>
+              <desc>
+                <formatted-text>
+                  <run>RevenuePerStudent</run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal'>
+              <desc>
+                <formatted-text>
+                  <run>State</run>
+                </formatted-text>
+              </desc>
+            </column>
+            <column-instance column='[Cluster]' derivation='None' name='[none:Cluster:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[RecordId]' derivation='None' name='[none:RecordId:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[AvgMath4Score]' derivation='Sum' name='[sum:AvgMath4Score:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[RevenuePerStudent]' derivation='Sum' name='[sum:RevenuePerStudent:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.08s3xe219ohc8i10mj3pe11xyo75].[none:State:nk]'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:State:nk]' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;DISTRICT_OF_COLUMBIA&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.08s3xe219ohc8i10mj3pe11xyo75].[none:State:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.08s3xe219ohc8i10mj3pe11xyo75].[sum:AvgMath4Score:qk]' field-type='quantitative' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.08s3xe219ohc8i10mj3pe11xyo75].[none:Cluster:ok]' />
+              <lod column='[federated.08s3xe219ohc8i10mj3pe11xyo75].[none:RecordId:nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='true' exclude-intercept='false' fit='linear' />
+          </pane>
+        </panes>
+        <rows>[federated.08s3xe219ohc8i10mj3pe11xyo75].[sum:AvgMath4Score:qk]</rows>
+        <cols>[federated.08s3xe219ohc8i10mj3pe11xyo75].[sum:RevenuePerStudent:qk]</cols>
+      </table>
+      <simple-id uuid='{C94351ED-37B5-4B00-8D37-785B7885642A}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Scatter Plot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='4' param='[federated.08s3xe219ohc8i10mj3pe11xyo75].[none:Cluster:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3A55E327-0986-4892-B420-648F199016FE}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Clusters'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='225'>
+            <card mode='compact' param='[Parameters].[AvgMath4Score Parameter]' type='parameter' />
+            <card mode='compact' param='[Parameters].[Choose a Y Axis (copy)_4587831029485629441]' type='parameter' />
+            <card pane-specification-id='0' param='[federated.08s3xe219ohc8i10mj3pe11xyo75].[none:Cluster:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.08s3xe219ohc8i10mj3pe11xyo75].[none:Cluster:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0DFBEF4B-2B94-4CBF-B896-D0D263336844}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Clusters' width='384'>
+      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
+      L/UXm4IzLz7myrsAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
