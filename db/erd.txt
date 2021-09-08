@@ -1,0 +1,33 @@
+RawRecord
+-
+Id PK varchar(100)
+Year int
+State varchar(2)
+Enrolled int
+TotalRevenue int
+FederalRevenue int
+StateRevenue int
+LocalRevenue int
+TotalExpenditure int
+InstructionExpenditure int
+SupportServicesExpenditure int
+CaptialOutlayExpenditure int
+OtherExpenditure int
+AvgMath4Score int
+AvgMath8Score int
+AvgReading4Score int
+AvgReading8Score int
+
+CalculatedStats
+-
+RecordId PK FK >- RawRecord.Id
+FederalFundingPercent decimal
+StateFundingPercent decimal
+LocalFundingPercent decimal
+RevenuePerStudent decimal
+InstructionalExpensePercent decimal
+
+Clusters
+-
+RecordId PK FK >- RawRecord.Id
+Cluster int
