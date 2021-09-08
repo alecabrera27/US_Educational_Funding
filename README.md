@@ -374,6 +374,15 @@ Where the following was found:
 
 After this step was completed, the team created the following plots based on how math scores compared to percentages of funding:
 
+![Federal Funding](https://github.com/alecabrera27/US_Educational_Funding/blob/74182678ddac662cfb973cf5d1117536392c121f/Resources/Images/federal_funding_math.PNG)
+
+![Local Funding](https://github.com/alecabrera27/US_Educational_Funding/blob/74182678ddac662cfb973cf5d1117536392c121f/Resources/Images/local_funding_math.PNG)
+
+![State Funding](https://github.com/alecabrera27/US_Educational_Funding/blob/74182678ddac662cfb973cf5d1117536392c121f/Resources/Images/state_funding_math.PNG)
+
+![Revenue per student](https://github.com/alecabrera27/US_Educational_Funding/blob/74182678ddac662cfb973cf5d1117536392c121f/Resources/Images/rev_per_student.PNG)
+
+![Instructional Funding](https://github.com/alecabrera27/US_Educational_Funding/blob/74182678ddac662cfb973cf5d1117536392c121f/Resources/Images/Instruction_funding_math.PNG)
 
 In reviewing the plots, and from the clusters themselves, the team noticed one clear outlier:
 
