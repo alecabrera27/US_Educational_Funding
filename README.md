@@ -52,9 +52,6 @@ By exploring the questions, we hope to provide advice/guidance to states as they
 
 ## What we could have done differently
 
-To ensure that our exploration of data is specific and measurable, we will be looking exclusively at the National Assessment of Education Progress (NAEP) Math and Reading scores for 4th and 8th grade. As the NAEP assessment is a congresionnally mandated project that is conducted nationwide, it will likely provide the best data for comparison across states. 
-
-
 ## Presentation
 
 For more information about the project: [Google Presentation](https://docs.google.com/presentation/d/1d_G04I7wVxt63fc7vXfgrIN7g2eSGCPtO8QhitXe3w4/edit?usp=sharing)
