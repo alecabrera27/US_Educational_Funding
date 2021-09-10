@@ -42,9 +42,153 @@ By exploring the questions, we hope to provide advice/guidance to states as they
 
 ## Data exploration phase
 
+After investigating the CSV file (and the respective columns contained within), the team decided to create the following ERD:
+
+![ERD](https://github.com/alecabrera27/US_Educational_Funding/blob/8c0fa84ab39505ff5eeb0fab92385742a13b71c0/Resources/Images/ERD.png)
+
+As noted, from the RawRecord table, in order to evaluate levels of funding (as well as understand how the data itself will be clustered), two pieces of information were missing from the original source file: Funding percentages and clustering information. Therefore, in order to fill in this missing information, the team decided to create two additional tables from the RawRecords table. 
+
+Therefore, after creating the RawRecord in pgAdmin, the team connected to a RDS in AWS.
+
+Utilizing the ETL.ipynb file under the database folder, the team creates a new table called "CalculatedStats" from the RawRecord table: 
+
+```
+# create database engine
+db_url = f"postgresql://{config.DB_USERNAME}:{config.DB_PASSWORD}@{config.DB_HOST}/{config.DB_NAME}"
+engine = create_engine(db_url)
+
+# load all the raw data into a datafame
+query = text('''SELECT * FROM "RawRecords";''')
+df = pd.read_sql_query(query,con=engine, index_col='Id')
+
+# create a df for the stats with the same index as the raw data
+stats_df = pd.DataFrame(index=df.index)
+# rename the index to match the schema
+stats_df.index.rename('RecordId', inplace=True)
+
+# calculate the stats
+stats_df['FederalFundingPercent'] = df['FederalRevenue']/df['TotalRevenue']
+stats_df['StateFundingPercent'] = df['StateRevenue']/df['TotalRevenue']
+stats_df['LocalFundingPercent'] = df['LocalRevenue']/df['TotalRevenue']
+stats_df['RevenuePerStudent'] = df['TotalRevenue']/df['Enrolled']
+stats_df['InstructionalExpensePercent'] = df['InstructionExpenditure']/df['TotalRevenue']
+
+```
+And finally, stores the table CalculatedStats in the database:
+
+```
+# store in the database
+con = engine.connect()
+table_name = 'CalculatedStats'
+stats_df.to_sql(table_name, con)
+```
+
+As the team continued their investigation into the data, the team decided to only focus on the 4th grade math scores for each state as a starting point for their data analysis. Utilizing the Exploratory_analysis.ipynb file, the team loaded in the CSV file and created the following scatter plots to determine if there were any initial correlations between funding percentages and average state math scores: 
+
+![Federal Funding](https://github.com/alecabrera27/US_Educational_Funding/blob/74182678ddac662cfb973cf5d1117536392c121f/Resources/Images/federal_funding_math.PNG)
+
+![Local Funding](https://github.com/alecabrera27/US_Educational_Funding/blob/74182678ddac662cfb973cf5d1117536392c121f/Resources/Images/local_funding_math.PNG)
+
+![State Funding](https://github.com/alecabrera27/US_Educational_Funding/blob/74182678ddac662cfb973cf5d1117536392c121f/Resources/Images/state_funding_math.PNG)
+
+With the scatter plots showing that there was a potential relationship between the two pieces of information, the team proceeded forward with the analysis of the data. 
+
 ## Analysis phase
 
+Now that the initial data exploration was completed, the team discussed and came to a consesus to utilizean unsupervised machine learning model. The team decided to utilize an unsupervised machine learning model as the outcomes are not known for the dataset itself. Further, as the team was interested in understanding higher vs. lower performing schools, the team decided to utilize K-means clustering. With this in mind, in order to determine the number of clusters to utilize, the team created an elbow curve:
+
+```
+inertia = []
+k = list(range(1, 11))
+
+# Looking for the best K
+for i in k:
+    km = KMeans(n_clusters=i, random_state=0)
+    km.fit(funding_df)
+    inertia.append(km.inertia_)
+    
+# Define a DataFrame to plot the Elbow Curve using hvPlot
+elbow_data = {"k": k, "inertia": inertia}
+df_elbow = pd.DataFrame(elbow_data)
+df_elbow.hvplot.line(x="k", y="inertia", title="Elbow Curve", xticks=k)
+```
+
+![Elbow Curve]()
+
+After discussion among the team, the group decided to utilize 3 clusters.
+
+Now, utilizing Kmeans-3-KP.ipynb, the RawRecords table was joined to the CalculatedStats table:
+
+```
+# load all the data into a datafame by joining the tables
+query = text('''
+Select * 
+FROM "RawRecords" as r
+JOIN "CalculatedStats" AS cs ON cs."RecordId"=r."Id";
+''')
+df = pd.read_sql_query(query,con=engine)
+df.set_index('Id', inplace=True)
+```
+
+With the number of clusters already determined by the team, the model was initialized, fitted, ran and added back to the dataframe:
+
+```
+# Initializing model with K = 3
+model = KMeans(n_clusters=3, random_state=5)
+
+# Fitting model
+model.fit(scaled_df)
+
+# Get the predictions
+predictions = model.predict(scaled_df)
+
+# Add clusters to funding dataframe
+scaled_df["Cluster"] = model.labels_
+scaled_df.head()
+
+#adding back to df2
+df['Cluster'] = model.labels_
+df.head()
+
+```
+From here, the team created the following plots from the clusters to begin to identify higher performing vs. lower performing states:
+
+![Federal Funding]()
+
+![Local Funding]()
+
+![State Funding]()
+
+![Instructional]()
+
+![Revenue per student]()
+
+In the plots, the team noticed one clear outlier (Cluster 2). Utilizing the ```.loc``` function, the team investigated the cluster further:
+
+![df.loc]()
+
+As it turns out, it appears as though the Disctrict of Columbia is a clear outlier as a result of receiving no "State" funding. 
+
 ## Technologies, languages, tools and algorithms
+
+The team has utilized the following:
+
+Python
+ * Pandas
+ * numpy
+ * matplotlib
+ * sklearn
+ * SQLAlchemy
+ * Plotly
+
+PgAdmin
+
+Tableau
+
+GitHub
+
+Slack (for communication)
+
 
 ## Results of the analysis
 
