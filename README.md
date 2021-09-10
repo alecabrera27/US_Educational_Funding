@@ -28,8 +28,8 @@ By performing an exploratory data analysis, we have found the following columns 
  * Capital Outlay Expenditure
  * Other Expenditure
 * Student Outcomes
- * Average National Assessment of Educational Progress Math Scores (4th & 8th Grade)
- * Average National Assessment of Educational Progress Reading Scores (4th & 8th Grade)
+  * Average National Assessment of Educational Progress Math Scores (4th & 8th Grade)
+  * Average National Assessment of Educational Progress Reading Scores (4th & 8th Grade)
 
 ## Questions we are seeking to answer with the data
 
@@ -113,7 +113,7 @@ df_elbow = pd.DataFrame(elbow_data)
 df_elbow.hvplot.line(x="k", y="inertia", title="Elbow Curve", xticks=k)
 ```
 
-![Elbow Curve]()
+![Elbow Curve](https://github.com/alecabrera27/US_Educational_Funding/blob/59303e059c0c5ea8fa1b9333cae196eaf4eed203/Resources/Images/elbow_curve.PNG)
 
 After discussion among the team, the group decided to utilize 3 clusters.
 
@@ -153,19 +153,19 @@ df.head()
 ```
 From here, the team created the following plots from the clusters to begin to identify higher performing vs. lower performing states:
 
-![Federal Funding]()
+![Federal Funding](https://github.com/alecabrera27/US_Educational_Funding/blob/59303e059c0c5ea8fa1b9333cae196eaf4eed203/Resources/Images/fed_funding_math_cluster.PNG)
 
-![Local Funding]()
+![Local Funding](https://github.com/alecabrera27/US_Educational_Funding/blob/59303e059c0c5ea8fa1b9333cae196eaf4eed203/Resources/Images/local_funding_math_cluster.PNG)
 
-![State Funding]()
+![State Funding](https://github.com/alecabrera27/US_Educational_Funding/blob/59303e059c0c5ea8fa1b9333cae196eaf4eed203/Resources/Images/state_funding_math_cluster.PNG)
 
-![Instructional]()
+![Instructional](https://github.com/alecabrera27/US_Educational_Funding/blob/59303e059c0c5ea8fa1b9333cae196eaf4eed203/Resources/Images/Instruction_funding_math.PNG)
 
-![Revenue per student]()
+![Revenue per student](https://github.com/alecabrera27/US_Educational_Funding/blob/59303e059c0c5ea8fa1b9333cae196eaf4eed203/Resources/Images/rev_per_student.PNG)
 
 In the plots, the team noticed one clear outlier (Cluster 2). Utilizing the ```.loc``` function, the team investigated the cluster further:
 
-![df.loc]()
+![df.loc](https://github.com/alecabrera27/US_Educational_Funding/blob/59303e059c0c5ea8fa1b9333cae196eaf4eed203/Resources/Images/df_loc.PNG)
 
 As it turns out, it appears as though the Disctrict of Columbia is a clear outlier as a result of receiving no "State" funding. 
 
