@@ -11,24 +11,25 @@ Create a config.py file in the database/ and Machine Learning/ directories inclu
 ### Populate the database with the raw data from Resources/states_all.csv
 
 ***Only required for the initial setup***
+
 Run the following command from the root directory of the repository
-'''
+```
 python database/populate_database.py
-'''
+```
 
 #### Calculate useful metrics
 
 Run the following command from the root directory of the repository
-'''
+```
 python database/ETL.py
-'''
+```
 
 ### Determine Clusters
 
 Run the following command from the root directory of the repository
-'''
+```
 python python Machine\ Learning/kmeans.py
-'''
+```
 
 ### Update Dashboard
 
