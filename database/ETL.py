@@ -39,7 +39,7 @@ try:
 
         rs = con.execute(text('DROP TABLE "CalculatedStats";'))
 except:
-    print("drop RawRecord table failed")
+    print("drop table failed")
 
 
 # store in the database

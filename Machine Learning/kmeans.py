@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-from pathlib import Path
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import OneHotEncoder
