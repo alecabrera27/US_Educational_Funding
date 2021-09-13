@@ -1,12 +1,20 @@
 ## Developer Instructions
 
-### Populate credentials
+### Setup Enviroment
 
-Create a config.py file in the database/ and Machine Learning/ directories including:
+Create a postgres database
+
+Create config.py files in the database/ and Machine Learning/ directories including:
 1. database username
 2. database password
 3. database host
 4. database name
+(see config_example.py)
+
+Install python dependencies
+```
+pip install -r requirements.txt
+```
 
 ### Populate the database with the raw data from Resources/states_all.csv
 
