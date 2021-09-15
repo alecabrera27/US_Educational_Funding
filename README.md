@@ -95,7 +95,13 @@ With the scatter plots showing that there was a potential relationship between t
 
 ## Analysis phase
 
-Now that the initial data exploration was completed, the team discussed and came to a consesus to utilizean unsupervised machine learning model. The team decided to utilize an unsupervised machine learning model as the outcomes are not known for the dataset itself. Further, as the team was interested in understanding higher vs. lower performing schools, the team decided to utilize K-means clustering. With this in mind, in order to determine the number of clusters to utilize, the team created an elbow curve:
+### Machine Learning Model 
+
+Now that the initial data exploration was completed, the team discussed and came to a consesus to utilizean unsupervised machine learning model. The team decided to utilize an unsupervised machine learning model as the outcomes are not known for the dataset itself.
+
+The team was interested in comparing the funding and expenditure statistics that may have resulted in higher and lower test scores. We could have just split the data set by their test scores alone and compared the other statistics. However, we recognize that there are more factors that influence the test scores than we have in our data set which could skew our comparison.
+
+With this in mind, in order to determine the number of clusters to utilize, the team created an elbow curve:
 
 ```
 inertia = []
@@ -169,6 +175,8 @@ In the plots, the team noticed one clear outlier (Cluster 2). Utilizing the ```.
 
 As it turns out, it appears as though the Disctrict of Columbia is a clear outlier as a result of receiving no "State" funding. 
 
+Using the KMeans model we were able to identify 2 clusters with significantly different mean test scores, thus we used these clusters to do our comparisons
+
 ## Technologies, languages, tools and algorithms
 
 The team has utilized the following:
@@ -189,10 +197,143 @@ GitHub
 
 Slack (for communication)
 
-
 ## Results of the analysis
+After the model established by the team, the team plotted out the clusters utilizing the average math/reading scores and the percentage of funding offered by the respective sources.
+
+The team created the following graphs:
+
+* Math scores compared to financial data:
+ * State Average 4th Grade Math
+   
+   * Federal funding 
+   * State funding
+   * Local funding
+   * Revenue per student
+   * Instructional expense per student
+   
+ * State Average 8th Grade Math
+  
+   * Federal funding 
+   * State funding
+   * Local funding
+   * Revenue per student
+   * Instructional expense per student
+
+* Reading scores compared to financial data:
+ * State Average 4th Grade Reading
+  
+   * Federal funding 
+   * State funding
+   * Local funding
+   * Revenue per student
+   * Instructional expense per student
+     
+ * State Average 8th Grade Reading
+ 
+   * Federal funding 
+   * State funding
+   * Local funding
+   * Revenue per student
+   * Instructional expense per student
+
+In addition to this, the team also created trend lines for each of the graphs to better understand the relationship present. For the trend lines, the r squared values for revenue per student, federal funding %, state funding %, and local funding % are above 10% vs all 4 test score categories. The stat with the least fit regression is Instructional expense % with r squared values of 5% or less. Based on the data present, the team drew the following conclusions.
+
+### Federal funding
+
+* 4th Grade Reading & Math Scores
+
+Based on the graphs provided here (along with trend lines):
+
+![Graphic]()
+
+![Graphic]()
+
+It appears to suggest that as the percentage of federal funding rises, that the average reading and math score for the 4th grade fall. 
+
+* 8th Grade Reading & Math Scores
+
+Similarly, as observed for 4th graders, we see the same trend occur for the 8th grade students as well:
+
+![Graphic]()
+
+![Graphic]()
+
+### State funding
+
+* 4th Grade Reading & Math Score
+
+As before, this appears to suggest that as the percentage of state funding rises, that the average math score for the 4th grade fall. 
+
+![Graphic]()
+
+![Graphic]()
+
+* 8th Grade Reading & Math Scores
+
+Interestingly enough, as before, this appears to suggest that as the percentage of state funding rises, that the average reading and math score for the 4th grade fall. 
+
+![Graphic]()
+
+![Graphic]()
+
+### Local funding
+
+* 4th Grade Reading & Math Score
+
+What was most interesting is that local funding seems to have the exact opposite effect on average reading/math scores as compared to state/local funding. Here, the data suggests that as local funding goes up, that average math scores for both fourth and eigth grade rise. 
+
+![Graphic]()
+
+![Graphic]()
+
+* 8th Grade Reading & Math Scores
+
+Similarly, again, what is most interesting is that as local funding rises for 8th grade, that the overall math/reading scores rise:
+
+![Graphic]()
+
+![Graphic]()
+
+### Revenue per student
+
+* 4th Grade Reading & Math Score
+
+Of no suprise though is the levels of the revenue per student. Here we see a relationship whereby as the revenue per student rises, the average math/reading score rise as well:
+
+![Graphic]()
+
+![Graphic]()
+
+* 8th Grade Reading & Math Scores
+
+As with 4th grade reading/math scores, we also see the same relationship for 8th grade as well:
+
+![Graphic]()
+
+![Graphic]()
+
+### Instructional expense per student
+
+* 4th Grade Reading & Math Score
+* 8th Grade Reading & Math Scores
+
+Based on the results from the machine learning model, it does not appear as though there is a clear relationship between instructional expense  per student and average math/reading scores:
+
+![Graphic]()
+
+![Graphic]()
+
+![Graphic]()
+
+![Graphic]()
+
+### Overall Analysis
+
+Based on the graphs created, and the analysis created by the team, the data appears to suggest that local funding (as it increases) has an influence on average math/reading scores for both math and reading for states themselves.
 
 ## Recommendations for future analysis
+
+With the understanding that state and federal funding appear to have a negative correlation, more analysis would be needed to understand why this relationship exists. Additional investigation into how federa/state funds are spent on education on the state level would likely yield insight into why the relationship appears to exist as it does.
 
 ## What we could have done differently
 
