@@ -244,9 +244,9 @@ In addition to this, the team also created trend lines for each of the graphs to
 
 Based on the graphs provided here (along with trend lines):
 
-![Graphic]()
+![Fourth Math](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_math_fed.PNG)
 
-![Graphic]()
+![Fourth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_read_fed.PNG)
 
 It appears to suggest that as the percentage of federal funding rises, that the average reading and math score for the 4th grade fall. 
 
@@ -254,9 +254,9 @@ It appears to suggest that as the percentage of federal funding rises, that the 
 
 Similarly, as observed for 4th graders, we see the same trend occur for the 8th grade students as well:
 
-![Graphic]()
+![Eighth Mat](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_math_fed.PNG)
 
-![Graphic]()
+![Eigth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_read_fed.PNG)
 
 ### State funding
 
@@ -264,17 +264,17 @@ Similarly, as observed for 4th graders, we see the same trend occur for the 8th 
 
 As before, this appears to suggest that as the percentage of state funding rises, that the average math score for the 4th grade fall. 
 
-![Graphic]()
+![Fourth Math](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_math_state.PNG)
 
-![Graphic]()
+![Fourth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_read_state.PNG)
 
 * 8th Grade Reading & Math Scores
 
 Interestingly enough, as before, this appears to suggest that as the percentage of state funding rises, that the average reading and math score for the 4th grade fall. 
 
-![Graphic]()
+![Eighth Mat](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_math_state.PNG)
 
-![Graphic]()
+![Eigth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_read_state.PNG)
 
 ### Local funding
 
@@ -282,17 +282,17 @@ Interestingly enough, as before, this appears to suggest that as the percentage 
 
 What was most interesting is that local funding seems to have the exact opposite effect on average reading/math scores as compared to state/local funding. Here, the data suggests that as local funding goes up, that average math scores for both fourth and eigth grade rise. 
 
-![Graphic]()
+![Fourth Math](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_math_local.PNG)
 
-![Graphic]()
+![Fourth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_read_local.PNG)
 
 * 8th Grade Reading & Math Scores
 
 Similarly, again, what is most interesting is that as local funding rises for 8th grade, that the overall math/reading scores rise:
 
-![Graphic]()
+![Eighth Mat](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_math_local.PNG)
 
-![Graphic]()
+![Eigth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_read_local.PNG)
 
 ### Revenue per student
 
@@ -300,17 +300,17 @@ Similarly, again, what is most interesting is that as local funding rises for 8t
 
 Of no suprise though is the levels of the revenue per student. Here we see a relationship whereby as the revenue per student rises, the average math/reading score rise as well:
 
-![Graphic]()
+![Fourth Math](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_math_rev.PNG)
 
-![Graphic]()
+![Fourth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_read_rev.PNG)
 
 * 8th Grade Reading & Math Scores
 
 As with 4th grade reading/math scores, we also see the same relationship for 8th grade as well:
 
-![Graphic]()
+![Eighth Mat](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_math_rev.PNG)
 
-![Graphic]()
+![Eigth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_read_rev.PNG)
 
 ### Instructional expense per student
 
@@ -319,13 +319,13 @@ As with 4th grade reading/math scores, we also see the same relationship for 8th
 
 Based on the results from the machine learning model, it does not appear as though there is a clear relationship between instructional expense  per student and average math/reading scores:
 
-![Graphic]()
+![Fourth Math](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_math_instruct.PNG)
 
-![Graphic]()
+![Fourth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_read_instruct.PNG)
 
-![Graphic]()
+![Eighth Mat](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_math_instruct.PNG)
 
-![Graphic]()
+![Eigth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_read_instruct.PNG)
 
 ### Overall Analysis
 
