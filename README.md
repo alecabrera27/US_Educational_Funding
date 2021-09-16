@@ -97,9 +97,21 @@ With the scatter plots showing that there was a potential relationship between t
 
 ### Machine Learning Model 
 
-Now that the initial data exploration was completed, the team discussed and came to a consesus to utilizean unsupervised machine learning model. The team decided to utilize an unsupervised machine learning model as the outcomes are not known for the dataset itself.
+Now that the initial data exploration was completed, the team discussed and came to a consesus to utilizean unsupervised machine learning model. Specifically, the team was interested in utilizing k-means. 
 
-The team was interested in comparing the funding and expenditure statistics that may have resulted in higher and lower test scores. We could have just split the data set by their test scores alone and compared the other statistics. However, we recognize that there are more factors that influence the test scores than we have in our data set which could skew our comparison.
+As the team was interested in comparing the funding and expenditure statistics that may have resulted in higher and lower test scores, the team understood that there would be at least two groups. We could have just split the data set by their test scores alone and compared the other statistics. However, we recognize that there are more factors that influence the test scores than we have in our data set which could skew our comparison.
+
+Further, the advantages of k-means were that it was:
+
+* Simple to implement
+* Scales to large data
+
+However, two of the disadvantages that can be present included:
+
+* Cluster outliers - While we understood that we would have at least two clusters, we did not know if there would be outliers to the clusters themselves.
+* Choosing k manually (we had to utilize an elbow curve) and there is a margin of error. 
+
+Source: [k-means advantages/disadvantages](https://developers.google.com/machine-learning/clustering/algorithm/advantages-disadvantages)
 
 With this in mind, in order to determine the number of clusters to utilize, the team created an elbow curve:
 
@@ -337,7 +349,26 @@ With the understanding that state and federal funding appear to have a negative 
 
 ## What we could have done differently
 
-## Presentation
+## Presentation/Dashboard
+
+The teams dashboard is located here:[US Educational Funding](https://public.tableau.com/views/USEducationalFunding/Dashboard?:language=en-US&:display_count=n&:origin=viz_share_link)
+
+The team utilized Tableau in order to create the dashboard of data present. The team imported the data from a JSON file and utilized scatter plots within Tableau and included custom parameters (and the implementation of a regression line) in order to create the visuals. 
+
+The interactive elements of the dashboard include the filtering ability for the following parameters:
+
+* Scores
+ * Average 4th Grade Reading & Math Score
+ * Average 8th Grade Reading & Math Scores
+
+* Funding/Expenditure
+   * Federal funding 
+   * State funding
+   * Local funding
+   * Revenue per student
+   * Instructional expense per student
+
+The user can utilize the dashboard to create any graphic needed to present the data needed. 
 
 For more information about the project: [Google Presentation](https://docs.google.com/presentation/d/1d_G04I7wVxt63fc7vXfgrIN7g2eSGCPtO8QhitXe3w4/edit?usp=sharing)
 
