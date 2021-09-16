@@ -307,15 +307,15 @@ The team utilized Tableau in order to create the dashboard of data present. The 
 The interactive elements of the dashboard include the filtering ability for the following parameters:
 
 * Scores
- * Average 4th Grade Reading & Math Score
- * Average 8th Grade Reading & Math Scores
+  * Average 4th Grade Reading & Math Score
+  * Average 8th Grade Reading & Math Scores
 
 * Funding/Expenditure
-   * Federal funding 
-   * State funding
-   * Local funding
-   * Revenue per student
-   * Instructional expense per student
+  * Federal funding 
+  * State funding
+  * Local funding
+  * Revenue per student
+  * Instructional expense per student
 
 The user can utilize the dashboard to create any graphic needed to present the data needed. 
 
