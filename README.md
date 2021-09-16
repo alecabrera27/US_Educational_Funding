@@ -351,7 +351,9 @@ With the understanding that state and federal funding appear to have a negative 
 
 ## Presentation/Dashboard
 
-The teams dashboard is located here:[US Educational Funding](https://public.tableau.com/views/USEducationalFunding/Dashboard?:language=en-US&:display_count=n&:origin=viz_share_link)
+The teams dashboard is located here: 
+
+[US Educational Funding](https://public.tableau.com/views/USEducationalFunding/Dashboard?:language=en-US&:display_count=n&:origin=viz_share_link)
 
 The team utilized Tableau in order to create the dashboard of data present. The team imported the data from a JSON file and utilized scatter plots within Tableau and included custom parameters (and the implementation of a regression line) in order to create the visuals. 
 
