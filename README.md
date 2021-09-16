@@ -97,9 +97,21 @@ With the scatter plots showing that there was a potential relationship between t
 
 ### Machine Learning Model 
 
-Now that the initial data exploration was completed, the team discussed and came to a consesus to utilizean unsupervised machine learning model. The team decided to utilize an unsupervised machine learning model as the outcomes are not known for the dataset itself.
+Now that the initial data exploration was completed, the team discussed and came to a consesus to utilizean unsupervised machine learning model. Specifically, the team was interested in utilizing k-means. 
 
-The team was interested in comparing the funding and expenditure statistics that may have resulted in higher and lower test scores. We could have just split the data set by their test scores alone and compared the other statistics. However, we recognize that there are more factors that influence the test scores than we have in our data set which could skew our comparison.
+As the team was interested in comparing the funding and expenditure statistics that may have resulted in higher and lower test scores, the team understood that there would be at least two groups. We could have just split the data set by their test scores alone and compared the other statistics. However, we recognize that there are more factors that influence the test scores than we have in our data set which could skew our comparison.
+
+Further, the advantages of k-means were that it was:
+
+* Simple to implement
+* Scales to large data
+
+However, two of the disadvantages that can be present included:
+
+* Cluster outliers - While we understood that we would have at least two clusters, we did not know if there would be outliers to the clusters themselves.
+* Choosing k manually (we had to utilize an elbow curve) and there is a margin of error. 
+
+Source: [k-means advantages/disadvantages](https://developers.google.com/machine-learning/clustering/algorithm/advantages-disadvantages)
 
 With this in mind, in order to determine the number of clusters to utilize, the team created an elbow curve:
 
@@ -200,7 +212,7 @@ Slack (for communication)
 ## Results of the analysis
 After the model established by the team, the team plotted out the clusters utilizing the average math/reading scores and the percentage of funding offered by the respective sources.
 
-The team created the following graphs:
+The team created the following graphs accessible on the team's [US Educational Funding Tableau Dashboard:](https://public.tableau.com/views/USEducationalFunding/Dashboard?:language=en-US&:display_count=n&:origin=viz_share_link)
 
 * Math scores compared to financial data:
  * State Average 4th Grade Math
@@ -238,94 +250,41 @@ The team created the following graphs:
 
 In addition to this, the team also created trend lines for each of the graphs to better understand the relationship present. For the trend lines, the r squared values for revenue per student, federal funding %, state funding %, and local funding % are above 10% vs all 4 test score categories. The stat with the least fit regression is Instructional expense % with r squared values of 5% or less. Based on the data present, the team drew the following conclusions.
 
-### Federal funding
+For simplicity, the team presents the 4th grade average math scores for each of the funding/expense scores below. However, all the graphs created by the team can be accessed via [Tableau](https://public.tableau.com/views/USEducationalFunding/Dashboard?:language=en-US&:display_count=n&:origin=viz_share_link).
 
-* 4th Grade Reading & Math Scores
+### State Average 4th Grade Math Scores
 
-Based on the graphs provided here (along with trend lines):
+* Federal Funding
+
+Based on the graph provided here (along with trend lines):
 
 ![Fourth Math](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_math_fed.PNG)
 
-![Fourth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_read_fed.PNG)
+It appears to suggest that as the percentage of federal funding rises, that the average math score for the 4th grade fall. 
 
-It appears to suggest that as the percentage of federal funding rises, that the average reading and math score for the 4th grade fall. 
-
-* 8th Grade Reading & Math Scores
-
-Similarly, as observed for 4th graders, we see the same trend occur for the 8th grade students as well:
-
-![Eighth Mat](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_math_fed.PNG)
-
-![Eigth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_read_fed.PNG)
-
-### State funding
-
-* 4th Grade Reading & Math Score
+* State Funding
 
 As before, this appears to suggest that as the percentage of state funding rises, that the average math score for the 4th grade fall. 
 
 ![Fourth Math](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_math_state.PNG)
 
-![Fourth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_read_state.PNG)
+* Local Funding
 
-* 8th Grade Reading & Math Scores
-
-Interestingly enough, as before, this appears to suggest that as the percentage of state funding rises, that the average reading and math score for the 4th grade fall. 
-
-![Eighth Mat](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_math_state.PNG)
-
-![Eigth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_read_state.PNG)
-
-### Local funding
-
-* 4th Grade Reading & Math Score
-
-What was most interesting is that local funding seems to have the exact opposite effect on average reading/math scores as compared to state/local funding. Here, the data suggests that as local funding goes up, that average math scores for both fourth and eigth grade rise. 
+What was most interesting is that local funding seems to have the exact opposite effect on average math scores as compared to state/local funding. Here, the data suggests that as local funding goes up, that average math scores for fourth grade rise. 
 
 ![Fourth Math](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_math_local.PNG)
 
-![Fourth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_read_local.PNG)
+* Revenue per Student
 
-* 8th Grade Reading & Math Scores
-
-Similarly, again, what is most interesting is that as local funding rises for 8th grade, that the overall math/reading scores rise:
-
-![Eighth Mat](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_math_local.PNG)
-
-![Eigth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_read_local.PNG)
-
-### Revenue per student
-
-* 4th Grade Reading & Math Score
-
-Of no suprise though is the levels of the revenue per student. Here we see a relationship whereby as the revenue per student rises, the average math/reading score rise as well:
+Of no suprise though is the levels of the revenue per student. Here we see a relationship whereby as the revenue per student rises, the average math score rises as well:
 
 ![Fourth Math](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_math_rev.PNG)
 
-![Fourth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_read_rev.PNG)
-
-* 8th Grade Reading & Math Scores
-
-As with 4th grade reading/math scores, we also see the same relationship for 8th grade as well:
-
-![Eighth Mat](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_math_rev.PNG)
-
-![Eigth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_read_rev.PNG)
-
-### Instructional expense per student
-
-* 4th Grade Reading & Math Score
-* 8th Grade Reading & Math Scores
+* Instructional expense per student
 
 Based on the results from the machine learning model, it does not appear as though there is a clear relationship between instructional expense  per student and average math/reading scores:
 
 ![Fourth Math](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_math_instruct.PNG)
-
-![Fourth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_read_instruct.PNG)
-
-![Eighth Mat](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_math_instruct.PNG)
-
-![Eigth Read](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_eigth_read_instruct.PNG)
 
 ### Overall Analysis
 
@@ -337,7 +296,28 @@ With the understanding that state and federal funding appear to have a negative 
 
 ## What we could have done differently
 
-## Presentation
+## Presentation/Dashboard
+
+The teams dashboard is located here: 
+
+[US Educational Funding](https://public.tableau.com/views/USEducationalFunding/Dashboard?:language=en-US&:display_count=n&:origin=viz_share_link)
+
+The team utilized Tableau in order to create the dashboard of data present. The team imported the data from a JSON file and utilized scatter plots within Tableau and included custom parameters (and the implementation of a regression line) in order to create the visuals. 
+
+The interactive elements of the dashboard include the filtering ability for the following parameters:
+
+* Scores
+  * Average 4th Grade Reading & Math Score
+  * Average 8th Grade Reading & Math Scores
+
+* Funding/Expenditure
+  * Federal funding 
+  * State funding
+  * Local funding
+  * Revenue per student
+  * Instructional expense per student
+
+The user can utilize the dashboard to create any graphic needed to present the data needed. 
 
 For more information about the project: [Google Presentation](https://docs.google.com/presentation/d/1d_G04I7wVxt63fc7vXfgrIN7g2eSGCPtO8QhitXe3w4/edit?usp=sharing)
 
