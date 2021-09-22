@@ -368,11 +368,11 @@ With a firm understanding of the results presented by the analysis, the team foc
 
 * Local Funding
 
-![Local]
+![Local](https://github.com/alecabrera27/US_Educational_Funding/blob/11fd01143ace3a72cddd7b7dde9d1c8bcd9b5b12/Resources/Images/linear_local.png)
 
 * Revenue per student
 
-![Revenue per student]
+![Revenue per student](https://github.com/alecabrera27/US_Educational_Funding/blob/11fd01143ace3a72cddd7b7dde9d1c8bcd9b5b12/Resources/Images/linear_rev_per_student.png)
 
 As noted in the graphs above, we draw the following conclusions/recommendations for practice:
 
