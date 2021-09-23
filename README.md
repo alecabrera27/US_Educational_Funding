@@ -348,19 +348,61 @@ Of no suprise though is the levels of the revenue per student. Here we see a rel
 
 * Instructional expense per student
 
-Based on the results from the machine learning model, it does not appear as though there is a clear relationship between instructional expense  per student and average math/reading scores:
+Based on the results from the machine learning model, it does not appear as though there is a clear relationship between instructional expense per student and average math/reading scores:
 
 ![Fourth Math](https://github.com/alecabrera27/US_Educational_Funding/blob/bdc1bbc0bd8986dac3d791b96a6c2b0f0e7b881c/Resources/Images/final_fourth_math_instruct.PNG)
 
-### Overall Analysis
+### T-Test
 
-Based on the graphs created, and the analysis created by the team, the data appears to suggest that local funding (as it increases) has an influence on average math/reading scores for both math and reading for states themselves.
+For futher analysis, the team conducted a two sample t-test for the two clusters (average scores & funding percentages) presented here:
+
+![t-test](https://github.com/alecabrera27/US_Educational_Funding/blob/8ea44bcb4291dde45f3131b57bb34fb369b75a10/Resources/Images/t-test-scores.png)
+
+![t-test](https://github.com/alecabrera27/US_Educational_Funding/blob/8ea44bcb4291dde45f3131b57bb34fb369b75a10/Resources/Images/t_test_cluster_comparison.png)
+
+Based on the p-value, we reject the null hypothesis. 
+
+### Linear Regression
+
+With a firm understanding of the results presented by the analysis, the team focused in on the two types of funding that appeared to influence test scores for states. With this in mind, the team created linear regressions of the following two variables:
+
+* Local Funding
+
+![Local](https://github.com/alecabrera27/US_Educational_Funding/blob/11fd01143ace3a72cddd7b7dde9d1c8bcd9b5b12/Resources/Images/linear_local.png)
+
+* Revenue per student
+
+![Revenue per student](https://github.com/alecabrera27/US_Educational_Funding/blob/11fd01143ace3a72cddd7b7dde9d1c8bcd9b5b12/Resources/Images/linear_rev_per_student.png)
+
+As noted in the graphs above, we draw the following conclusions/recommendations for practice:
+
+* If a state where to increase the amount of local funding provided by schools by 10%, they could anticipate an increase to NAEP test scores by about 2 grade points (+/- .04 points).
+
+* If a state where to increase the amount of revenue spent on a student by about 1 dollar per, they could anticipate NAEP test scores to increase by about 1 grade point (+/- .01 points).
 
 ## Recommendations for future analysis
 
-With the understanding that state and federal funding appear to have a negative correlation, more analysis would be needed to understand why this relationship exists. Additional investigation into how federa/state funds are spent on education on the state level would likely yield insight into why the relationship appears to exist as it does.
+With the understanding that state and federal funding appear to have a negative correlation, more analysis would be needed to understand why this relationship exists. Additional investigation into how federal/state funds are spent on education on the state level would likely yield insight into why the relationship appears to exist as it does.
+
+Additionally, while we understand that local funding and revenue per student have a positive correlation, focusing in on a specific state (specifically those in a higher performing cluster) and drilling down into how funds are exactly spent when coming from different revenue streams would likely provide further insight. 
+
+Finally, taking a look at state specific testing grades (e.g., TEKS for the state of Texas) could provide another avenue for analysis. 
 
 ## What we could have done differently
+
+The team would consider the following four items:
+
+* Year differences in data
+  * The team would consider taking a look at variability and influence of the years on the data itself. For example, was there a different metric/standard in place between 2000 to 1999?
+
+* Environmental factors (e.g., state differences)
+  * Understanding that each state has its own societal and political pressures (especially as they relate towards schooling) would be another factor the team would consider investigating were they to redo the analysis. 
+
+* Currency/buying power
+  * Taking into consideration the inflation/buying power of the differences between each state/year would be another factor the team would consider.
+
+* State curriculum
+  * As each state sets its own curriculum standards, the team would consider taking this into consideration provided they were to redo it.
 
 ## Presentation/Dashboard
 
